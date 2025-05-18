@@ -10,7 +10,7 @@
 	"keywords": [
 		"DevSprint-backend"
 	],
-	"author": "Saikat Mukherjee",
+	"author": "Gourish Bhatia",
 	"license": "ISC",
 	"dependencies": {
 		"bcrypt": "^5.1.0",
