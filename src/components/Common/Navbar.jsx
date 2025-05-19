@@ -11,24 +11,7 @@ import { categories } from "../../services/apis"
 import { ACCOUNT_TYPE } from "../../utils/constants"
 import ProfileDropdown from "../core/Auth/ProfileDropdown"
 
-// const subLinks = [
-//   {
-//     title: "Python",
-//     link: "/catalog/python",
-//   },
-//   {
-//     title: "javascript",
-//     link: "/catalog/javascript",
-//   },
-//   {
-//     title: "web-development",
-//     link: "/catalog/web-development",
-//   },
-//   {
-//     title: "Android Development",
-//     link: "/catalog/Android Development",
-//   },
-// ];
+
 
 function Navbar() {
   const { token } = useSelector((state) => state.auth)
@@ -57,7 +40,24 @@ function Navbar() {
   const matchRoute = (route) => {
     return matchPath({ path: route }, location.pathname)
   }
-
+  subLinks = [
+  {
+    title: "Python",
+    link: "/catalog/python",
+  },
+  {
+    title: "javascript",
+    link: "/catalog/javascript",
+  },
+  {
+    title: "web-development",
+    link: "/catalog/web-development",
+  },
+  {
+    title: "Android Development",
+    link: "/catalog/Android Development",
+  },
+  ];
   return (
     <div
       className={`flex h-14 items-center justify-center border-b-[1px] border-b-richblack-700 ${
