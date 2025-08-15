@@ -1,0 +1,98 @@
+{
+  "python": {
+    "name": "Python",
+    "description": "Master Python, the versatile language for web development, data science, and AI.",
+    "courses": [
+      {
+        "_id": "60e1f3f7e3c9a10015b63013",
+        "courseName": "The Complete Python Pro Bootcamp",
+        "price": 99.99,
+        "thumbnail": "https://images.pexels.com/photos/11035542/pexels-photo-11035542.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "ratingAndReviews": [{ "rating": 4.8 }, { "rating": 4.9 }],
+        "instructor": {
+          "firstName": "Anna",
+          "lastName": "Johnson"
+        },
+        "studentsEnrolled": 55000
+      },
+      {
+        "_id": "60e1f3f7e3c9a10015b63014",
+        "courseName": "Python for Data Science and Machine Learning",
+        "price": 129.99,
+        "thumbnail": "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "ratingAndReviews": [{ "rating": 4.7 }, { "rating": 4.6 }],
+        "instructor": {
+          "firstName": "John",
+          "lastName": "Smith"
+        },
+        "studentsEnrolled": 48000
+      }
+    ]
+  },
+  "javascript": {
+    "name": "JavaScript",
+    "description": "Become an expert in JavaScript, the language of the web.",
+    "courses": [
+      {
+        "_id": "60e1f3f7e3c9a10015b63018",
+        "courseName": "Modern JavaScript from the Beginning",
+        "price": 79.99,
+        "thumbnail": "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "ratingAndReviews": [{ "rating": 4.7 }, { "rating": 4.8 }],
+        "instructor": {
+          "firstName": "Chris",
+          "lastName": "Evans"
+        },
+        "studentsEnrolled": 30000
+      }
+    ]
+  },
+  "web-development": {
+    "name": "Web Development",
+    "description": "Learn to build modern, responsive, and powerful websites from scratch.",
+    "courses": [
+      {
+        "_id": "60e1f3f7e3c9a10015b63023",
+        "courseName": "The Full-Stack Web Development Course",
+        "price": 199.99,
+        "thumbnail": "https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "ratingAndReviews": [{ "rating": 4.9 }, { "rating": 5.0 }],
+        "instructor": {
+          "firstName": "Sophia",
+          "lastName": "Garcia"
+        },
+        "studentsEnrolled": 95000
+      },
+      {
+        "_id": "60e1f3f7e3c9a10015b63024",
+        "courseName": "React Front-End Development",
+        "price": 119.99,
+        "thumbnail": "https://images.pexels.com/photos/208583/pexels-photo-208583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "ratingAndReviews": [{ "rating": 4.8 }, { "rating": 4.7 }],
+        "instructor": {
+          "firstName": "Robert",
+          "lastName": "Patterson"
+        },
+        "studentsEnrolled": 80000
+      }
+    ]
+  },
+  "android-development": {
+    "name": "Android Development",
+    "description": "Learn to build mobile applications for the Android ecosystem.",
+    "courses": [
+      {
+        "_id": "60e1f3f7e3c9a10015b63028",
+        "courseName": "Android App Development Masterclass",
+        "price": 129.99,
+        "thumbnail": "https://images.pexels.com/photos/1036399/pexels-photo-1036399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "ratingAndReviews": [{ "rating": 4.7 }, { "rating": 4.8 }],
+        "instructor": {
+          "firstName": "Tom",
+          "lastName": "Wilson"
+        },
+        "studentsEnrolled": 45000
+      }
+    ]
+  }
+}
