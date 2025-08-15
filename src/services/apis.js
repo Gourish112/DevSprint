@@ -25,38 +25,38 @@ export const studentEndpoints = {
 
 // COURSE ENDPOINTS
 export const courseEndpoints = {
-  GET_ALL_COURSE_API: BASE_URL + "/course/getAllCourses",
-  COURSE_DETAILS_API: BASE_URL + "/course/getCourseDetails",
-  EDIT_COURSE_API: BASE_URL + "/course/editCourse",
-  COURSE_CATEGORIES_API: BASE_URL + "/course/showAllCategories",
-  CREATE_COURSE_API: BASE_URL + "/course/createCourse",
-  CREATE_SECTION_API: BASE_URL + "/course/addSection",
-  CREATE_SUBSECTION_API: BASE_URL + "/course/addSubSection",
-  UPDATE_SECTION_API: BASE_URL + "/course/updateSection",
-  UPDATE_SUBSECTION_API: BASE_URL + "/course/updateSubSection",
-  GET_ALL_INSTRUCTOR_COURSES_API: BASE_URL + "/course/getInstructorCourses",
-  DELETE_SECTION_API: BASE_URL + "/course/deleteSection",
-  DELETE_SUBSECTION_API: BASE_URL + "/course/deleteSubSection",
-  DELETE_COURSE_API: BASE_URL + "/course/deleteCourse",
+  GET_ALL_COURSE_API: BASE_URL + "/getAllCourses",
+  COURSE_DETAILS_API: BASE_URL + "/getCourseDetails",
+  EDIT_COURSE_API: BASE_URL + "/editCourse",
+  COURSE_CATEGORIES_API: BASE_URL + "/showAllCategories",
+  CREATE_COURSE_API: BASE_URL + "/createCourse",
+  CREATE_SECTION_API: BASE_URL + "/addSection",
+  CREATE_SUBSECTION_API: BASE_URL + "/addSubSection",
+  UPDATE_SECTION_API: BASE_URL + "/updateSection",
+  UPDATE_SUBSECTION_API: BASE_URL + "/updateSubSection",
+  GET_ALL_INSTRUCTOR_COURSES_API: BASE_URL + "/getInstructorCourses",
+  DELETE_SECTION_API: BASE_URL + "/deleteSection",
+  DELETE_SUBSECTION_API: BASE_URL + "/deleteSubSection",
+  DELETE_COURSE_API: BASE_URL + "/deleteCourse",
   GET_FULL_COURSE_DETAILS_AUTHENTICATED:
-    BASE_URL + "/course/getFullCourseDetails",
-  LECTURE_COMPLETION_API: BASE_URL + "/course/updateCourseProgress",
-  CREATE_RATING_API: BASE_URL + "/course/createRating",
+    BASE_URL + "/getFullCourseDetails",
+  LECTURE_COMPLETION_API: BASE_URL + "/updateCourseProgress",
+  CREATE_RATING_API: BASE_URL + "/createRating",
 }
 
 // RATINGS AND REVIEWS
 export const ratingsEndpoints = {
-  REVIEWS_DETAILS_API: BASE_URL + "/course/getReviews",
+  REVIEWS_DETAILS_API: BASE_URL + "/getReviews",
 }
 
 // CATAGORIES API
 export const categories = {
-  CATEGORIES_API: BASE_URL + "/course/showAllCategories",
+  CATEGORIES_API: BASE_URL + "/showAllCategories",
 }
 
 // CATALOG PAGE DATA
 export const catalogData = {
-  CATALOGPAGEDATA_API: BASE_URL + "/course/getCategoryPageDetails",
+  CATALOGPAGEDATA_API: BASE_URL + "/getCategoryPageDetails",
 }
 // CONTACT-US API
 export const contactusEndpoint = {
