@@ -11,12 +11,7 @@ import { categories } from "../../services/apis"
 import { ACCOUNT_TYPE } from "../../utils/constants"
 import ProfileDropdown from "../core/Auth/ProfileDropdown"
 
-const staticSubLinks = [
-  { title: "Python", link: "/catalog/python" },
-  { title: "JavaScript", link: "/catalog/javascript" },
-  { title: "Web Development", link: "/catalog/web-development" },
-  { title: "Android Development", link: "/catalog/android-development" },
-];
+
 
 
 function Navbar() {
