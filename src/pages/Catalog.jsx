@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 
-// import CourseCard from "../components/Catalog/CourseCard"
-// import CourseSlider from "../components/Catalog/CourseSlider"
 import Footer from "../components/Common/Footer"
 import Course_Card from "../components/core/Catalog/Course_Card"
 import Course_Slider from "../components/core/Catalog/Course_Slider"
@@ -17,33 +15,35 @@ function Catalog() {
   const { catalogName } = useParams()
   const [active, setActive] = useState(1)
   const [catalogPageData, setCatalogPageData] = useState(null)
-  const [categoryId, setCategoryId] = useState("")
-  // Fetch All Categories
+
+  // Combined useEffect to fetch all data in one go
   useEffect(() => {
-    ;(async () => {
+    const fetchCatalogData = async () => {
       try {
+        // Step 1: Fetch all categories
         const res = await apiConnector("GET", categories.CATEGORIES_API)
-        const category_id = res?.data?.data?.filter(
-          (ct) => ct.name.split(" ").join("-").toLowerCase() === catalogName
-        )[0]._id
-        setCategoryId(category_id)
-      } catch (error) {
-        console.log("Could not fetch Categories.", error)
-      }
-    })()
-  }, [catalogName])
-  useEffect(() => {
-    if (categoryId) {
-      ;(async () => {
-        try {
-          const res = await getCatalogPageData(categoryId)
+        
+        // Step 2: Find the matching category by name from URL
+        const category = res?.data?.data?.find(
+          (cat) => cat.name.split(" ").join("-").toLowerCase() === catalogName
+        )
+        
+        // Step 3: Check if a category was found before fetching its data
+        if (category) {
+          const res = await getCatalogPageData(category._id)
           setCatalogPageData(res)
-        } catch (error) {
-          console.log(error)
+        } else {
+          // Handle case where category is not found
+          console.error("No matching category found for:", catalogName)
+          setCatalogPageData({ success: false })
         }
-      })()
+      } catch (error) {
+        console.error("Could not fetch categories or catalog page data.", error)
+        setCatalogPageData({ success: false })
+      }
     }
-  }, [categoryId])
+    fetchCatalogData()
+  }, [catalogName])
 
   if (loading || !catalogPageData) {
     return (
@@ -52,6 +52,7 @@ function Catalog() {
       </div>
     )
   }
+
   if (!loading && !catalogPageData.success) {
     return <Error />
   }
@@ -88,7 +89,7 @@ function Catalog() {
             } cursor-pointer`}
             onClick={() => setActive(1)}
           >
-            Most Populer
+            Most Popular
           </p>
           <p
             className={`px-4 py-2 ${
@@ -139,4 +140,3 @@ function Catalog() {
 }
 
 export default Catalog
-
