@@ -56,7 +56,7 @@ const { auth, isInstructor, isStudent, isAdmin } = require("../middleware/auth")
 // ********************************************************************************************************
 
 // Courses can Only be Created by Instructors
-router.post("/createCourse", createCourse)
+router.post("/createCourse",auth, isInstructor, createCourse)
 // Edit Course routes
 router.post("/editCourse", auth, isInstructor, editCourse)
 //Add a Section to a Course
