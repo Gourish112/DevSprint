@@ -55,12 +55,12 @@ centerInsufficientSlides={true}
     1280: { slidesPerView: 4 },
   }}
   modules={[FreeMode, Pagination, Autoplay]}
-  className="w-full"
+  className="w-auto"
 >
 
           {reviews.map((review, i) => {
             return (
-              <SwiperSlide key={i} className="!w-auto ">
+              <SwiperSlide key={i} className="!w-auto flex justify-center">
                 <div className="flex flex-col gap-3 bg-richblack-800 p-3 text-[14px] text-richblack-25 w-[250px]">
                   <div className="flex items-center gap-4">
                     <img
