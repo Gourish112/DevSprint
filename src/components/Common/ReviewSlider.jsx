@@ -37,7 +37,7 @@ function ReviewSlider() {
 
   return (
     <div className="text-white w-full">
-      <div className="my-[50px] w-full max-w-maxContentTab lg:max-w-maxContent">
+      <div className="my-[50px] w-full flex justify-center">
         <Swiper
   spaceBetween={25}
   loop={true}
@@ -60,7 +60,7 @@ centerInsufficientSlides={true}
 
           {reviews.map((review, i) => {
             return (
-              <SwiperSlide key={i} className="!w-auto">
+              <SwiperSlide key={i} className="!w-auto ">
                 <div className="flex flex-col gap-3 bg-richblack-800 p-3 text-[14px] text-richblack-25 w-[250px]">
                   <div className="flex items-center gap-4">
                     <img
