@@ -33,10 +33,13 @@ function ReviewSlider() {
     })()
   }, [])
 
+  // console.log(reviews)
+
   return (
     <div className="text-white">
       <div className="my-[50px] h-[184px] max-w-maxContentTab lg:max-w-maxContent">
         <Swiper
+          slidesPerView={4}
           spaceBetween={25}
           loop={true}
           freeMode={true}
@@ -46,13 +49,6 @@ function ReviewSlider() {
           }}
           modules={[FreeMode, Pagination, Autoplay]}
           className="w-full "
-          breakpoints={{
-            300: { slidesPerView: 1.1, spaceBetween: 15 },
-            640: { slidesPerView: 2, spaceBetween: 20 },
-            768: { slidesPerView: 3, spaceBetween: 25 },
-            1024: { slidesPerView: 4, spaceBetween: 30 },
-            1280: { slidesPerView: 4, spaceBetween: 30 }
-          }}
         >
           {reviews.map((review, i) => {
             return (
@@ -75,7 +71,7 @@ function ReviewSlider() {
                       </h2>
                     </div>
                   </div>
-                  <p className="font-medium text-richblack-25 overflow-hidden text-wrap">
+                  <p className="font-medium text-richblack-25">
                     {review?.review.split(" ").length > truncateWords
                       ? `${review?.review
                           .split(" ")
@@ -101,6 +97,7 @@ function ReviewSlider() {
               </SwiperSlide>
             )
           })}
+          {/* <SwiperSlide>Slide 1</SwiperSlide> */}
         </Swiper>
       </div>
     </div>
