@@ -18,7 +18,7 @@ const CourseCard = ({cardData, currentCard, setCurrentCard}) => {
         <div
           className={` ${
             currentCard === cardData?.heading 
-          } font-semibold text-[20px]`}
+          } font-semibold text-[20px] text-white`}
         >
           {cardData?.heading}
         </div>
