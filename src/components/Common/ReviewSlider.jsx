@@ -46,6 +46,8 @@ function ReviewSlider() {
     delay: 2500,
     disableOnInteraction: false,
   }}
+  centeredSlides={true}
+centerInsufficientSlides={true}
   breakpoints={{
     320: { slidesPerView: 1 },
     640: { slidesPerView: 2 },
