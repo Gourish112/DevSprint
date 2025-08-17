@@ -1,45 +1,61 @@
-import React, { useEffect, useState } from "react"
-import ReactStars from "react-rating-stars-component"
+import React, { useEffect, useState } from "react";
+import ReactStars from "react-rating-stars-component";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react"
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import "swiper/css"
-import "swiper/css/free-mode"
-import "swiper/css/pagination"
-import "../../App.css"
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import "../../App.css";
 // Icons
-import { FaStar } from "react-icons/fa"
+import { FaStar } from "react-icons/fa";
 // Import required modules
-import { Autoplay, FreeMode, Pagination } from "swiper"
+import { Autoplay, FreeMode, Pagination } from "swiper";
 
 // Get apiFunction and the endpoint
-import { apiConnector } from "../../services/apiConnector"
-import { ratingsEndpoints } from "../../services/apis"
+import { apiConnector } from "../../services/apiConnector";
+import { ratingsEndpoints } from "../../services/apis";
 
 function ReviewSlider() {
-  const [reviews, setReviews] = useState([])
-  const truncateWords = 15
+  const [reviews, setReviews] = useState([]);
+  const [slides, setSlides] = useState(4); // default to 4 slides for desktop
+  const truncateWords = 15;
+
+  // Add a resize event listener to update slidesPerView
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setSlides(1); // One slide for smaller screens
+      } else if (window.innerWidth <= 1024) {
+        setSlides(2); // Two slides for tablets
+      } else {
+        setSlides(4); // Four slides for desktops
+      }
+    };
+
+    // Initial check on mount
+    handleResize();
+
+    // Add and clean up the event listener
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
-    ;(async () => {
-      const { data } = await apiConnector(
-        "GET",
-        ratingsEndpoints.REVIEWS_DETAILS_API
-      )
+    (async () => {
+      const { data } = await apiConnector("GET", ratingsEndpoints.REVIEWS_DETAILS_API);
       if (data?.success) {
-        setReviews(data?.data)
+        setReviews(data?.data);
       }
-    })()
-  }, [])
-
-  // console.log(reviews)
+    })();
+  }, []);
 
   return (
     <div className="text-white">
       <div className="my-[50px] h-[184px] max-w-maxContentTab lg:max-w-maxContent">
         <Swiper
-          slidesPerView={4}
+          slidesPerView={slides} // Use the state variable here
           spaceBetween={25}
           loop={true}
           freeMode={true}
@@ -95,13 +111,12 @@ function ReviewSlider() {
                   </div>
                 </div>
               </SwiperSlide>
-            )
+            );
           })}
-          {/* <SwiperSlide>Slide 1</SwiperSlide> */}
         </Swiper>
       </div>
     </div>
-  )
+  );
 }
 
-export default ReviewSlider
+export default ReviewSlider;
