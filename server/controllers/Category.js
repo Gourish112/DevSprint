@@ -46,7 +46,6 @@ exports.showAllCategories = async (req, res) => {
 exports.categoryPageDetails = async (req, res) => {
   try {
     const { categoryId } = req.body
-    console.log("BACKEND: categoryId received:", categoryId);
     // Get courses for the specified category
     const selectedCategory = await Category.findById(categoryId)
       .populate({
