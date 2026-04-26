@@ -10,6 +10,9 @@
 	"keywords": [
 		"DevSprint-backend"
 	],
+  "engines": {
+    "node": "20.x"
+  }
 	"author": "Gourish Bhatia",
 	"license": "ISC",
 	"dependencies": {
