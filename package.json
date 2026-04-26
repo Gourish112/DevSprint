@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@getbrevo/brevo": "^5.0.4",
     "@ramonak/react-progress-bar": "^5.0.3",
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
@@ -22,6 +23,7 @@
     "express": "^4.21.2",
     "express-fileupload": "^1.5.1",
     "jsonwebtoken": "^9.0.2",
+    "mailersend": "^2.8.0",
     "mongoose": "^8.9.3",
     "node-schedule": "^2.1.1",
     "nodemailer": "^6.9.16",
