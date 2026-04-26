@@ -1,3 +1,5 @@
+const { fetch } = require("undici");
+global.fetch = fetch;
 const { BrevoClient } = require('@getbrevo/brevo');
 require('dotenv').config();
 const brevo = new BrevoClient({
